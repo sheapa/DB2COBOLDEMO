@@ -1,0 +1,12 @@
+//MATEDVD JOB MSGLEVEL=(1,1),NOTIFY=&SYSUID                       
+//PLIB    JCLLIB ORDER=(MATE1.PROCLIB)                            
+//*                                                               
+//*  COBOL + DB2 PRECOMPILE AND LINKEDIT                          
+//*                                                               
+//DBPREC  EXEC DB2COBCL,                                          
+//             COPYLIB=MATEDV.COPYLIB,         <= COPYBOOK LIBRARY
+//             DCLGLIB=MATEDV.DCLGEN.COBOL,    <= DCLGEN LIBRARY  
+//             DBRMLIB=MATEDV.DBRMLIB,         <= DBRM LIBRARY    
+//             LOADLIB=MATEDV.LOADLIB,         <= LOAD LIBRARY    
+//             SRCLIB=MATEDV.COBOL.SRCLIB,     <= SOURCE LIBRARY  
+//             MEMBER=PROJECT1                 <= SOURCE MEMBER   

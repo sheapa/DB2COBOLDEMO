@@ -1,0 +1,24 @@
+//MATEDVD JOB MSGLEVEL=(1,1),NOTIFY=&SYSUID     
+//*                                             
+//*  DB2 BIND JCL                               
+//*                                             
+//BIND     EXEC PGM=IKJEFT01                    
+//STEPLIB  DD  DISP=SHR,DSN=DSNA10.DBAG.SDSNEXIT
+//         DD  DISP=SHR,DSN=DSNA10.SDSNLOAD     
+//DBRMLIB  DD  DSN=MATEDV.DBRMLIB,DISP=SHR      
+//SYSPRINT DD  SYSOUT=*                         
+//SYSTSPRT DD  SYSOUT=*                         
+//SYSUDUMP DD  SYSOUT=*                         
+//SYSTSIN  DD  *                                
+DSN SYSTEM (DBAG   )                            
+BIND  MEMBER    (PROJECT1)  -                   
+      PLAN      (MATEDVA ) -                    
+      ACTION    (REP)       -                   
+      ISOLATION (CS)        -                   
+      VALIDATE  (BIND)      -                   
+      RELEASE   (COMMIT)    -                   
+      OWNER     (MATEDV )  -                    
+      QUALIFIER (MATEDV )  -                    
+      ENCODING  (1047)                          
+END                                             
+/*                                              

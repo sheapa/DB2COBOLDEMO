@@ -1,0 +1,21 @@
+//MATEDVD JOB MSGLEVEL=(1,1),NOTIFY=&SYSUID                       
+//*                                                               
+//*  COBOL DB2 RUN JCL                                            
+//*                                                               
+//STEP01   EXEC PGM=IKJEFT01,                                     
+//             DYNAMNBR=20,REGION=4096K                           
+//STEPLIB  DD  DISP=SHR,DSN=DSNA10.DBAG.SDSNEXIT                  
+//         DD  DISP=SHR,DSN=DSNA10.SDSNLOAD                       
+//DDEMPDET DD  DSN=MATEDV.EMPLOYEE.INPUT02(MEMBER),UNIT=SYSDA,    
+//             DISP=(OLD,KEEP,KEEP)                               
+//SYSPRINT DD  SYSOUT=*                                           
+//SYSTSPRT DD  SYSOUT=*                                           
+//SYSUDUMP DD  SYSOUT=*                                           
+//SYSOUT   DD  SYSOUT=*                                           
+//SYSTSIN  DD  *                                                  
+DSN SYSTEM (DBAG   )                                              
+  RUN PROGRAM   (PROJECT1)  -                                     
+      PLAN      (MATEDVA ) -                                      
+      LIBRARY   ('MATEDV.LOADLIB')                                
+END                                                               
+/*                                                                
