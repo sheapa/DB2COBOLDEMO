@@ -21,7 +21,7 @@ A COBOL program that inserts, updates and deletes records into a DB2 table. Acco
 4. Debug program using SDSF. Obtain zero return code.
 5. After zero return code compile, run program with JCL.
 6. View SYSOUT to see successfully run COBOL program.
-7. Copy program from mainframe into .txt file for upload to GitHub. 
+7. Copy program from mainframe into VS Code .cbl file for upload to GitHub. 
 8. Upload to Github & complete README.
 
 ## Pics or it didn't happen.
