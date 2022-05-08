@@ -25,4 +25,4 @@ A COBOL program that inserts, updates and deletes records into a DB2 table. Acco
 8. Upload to Github & complete README.
 
 ## Pics or it didn't happen.
-![Alt text](/GIF/DB2DEMOGIF.gif?raw=true "Method Gif")
+![Alt text](CompanyManagementTools/CompanyManagementTools/CompanyManagementTools/GIF/CMT.gif?raw=true "Method Gif")
